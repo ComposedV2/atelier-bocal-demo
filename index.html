@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Site de démonstration : ne pas indexer dans les moteurs de recherche. -->
+  <meta name="robots" content="noindex, nofollow">
+  <title>Atelier Bocal — Bocaux et conserves artisanales</title>
+
+  <!--
+    SITE DE DÉMONSTRATION VOLONTAIREMENT MAL CONFIGURÉ (scanner SecuriteBaaS).
+    Tout est FICTIF : les identifiants Google Analytics, Meta Pixel, Crisp et Supabase
+    n'existent pas. Les « traceurs » ci-dessous sont des imitations inertes : aucun script
+    externe n'est chargé, aucune donnée n'est envoyée à Google, Meta ou Crisp.
+  -->
+
+  <!-- Imitation du code Google Analytics (gtag) — identifiant fictif, sans chargement de gtag.js -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-DEMO000000');
+  </script>
+
+  <!-- Imitation du Meta Pixel — identifiant fictif, sans chargement de fbevents.js -->
+  <script>
+    window.fbq = window.fbq || function(){ (window.fbq.queue = window.fbq.queue || []).push(arguments); };
+    fbq('init', '000000000000000');
+    fbq('track', 'PageView');
+  </script>
+
+  <!-- Imitation du widget Crisp — identifiant fictif, sans chargement de client.crisp.chat -->
+  <script>
+    window.$crisp = [];
+    window.CRISP_WEBSITE_ID = "00000000-0000-0000-0000-000000000000";
+  </script>
+
+  <style>
+    :root { --brand: #b4532a; --ink: #2b2118; --paper: #fbf6ef; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Georgia, "Times New Roman", serif; color: var(--ink); background: var(--paper); line-height: 1.6; }
+    header, main, footer { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+    nav a { margin-right: 16px; color: var(--brand); text-decoration: none; }
+    h1 { font-size: 2.2rem; margin-bottom: 0; }
+    .tagline { margin-top: 4px; font-style: italic; }
+    .products { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+    .card { background: #fff; border: 1px solid #e8dccb; border-radius: 8px; padding: 16px; }
+    footer { font-size: 0.85rem; color: #7a6a58; border-top: 1px solid #e8dccb; }
+    #chat-bubble { position: fixed; right: 20px; bottom: 20px; background: var(--brand); color: #fff;
+      border: 0; border-radius: 999px; padding: 12px 18px; font-size: 1rem; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,.2); }
+    #chat-panel { display: none; position: fixed; right: 20px; bottom: 80px; width: 280px; background: #fff;
+      border: 1px solid #e8dccb; border-radius: 12px; padding: 16px; box-shadow: 0 4px 16px rgba(0,0,0,.15); }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="./">Accueil</a>
+      <a href="#produits">Nos bocaux</a>
+      <a href="#atelier">L'atelier</a>
+      <a href="mailto:contact@example.com">Contact</a>
+    </nav>
+    <h1>Atelier Bocal</h1>
+    <p class="tagline">Bocaux, confitures et conserves artisanales préparés à la main.</p>
+  </header>
+
+  <main>
+    <section id="atelier">
+      <h2>Notre atelier</h2>
+      <p>
+        Depuis notre petite cuisine, nous préparons chaque semaine des conserves de saison
+        avec des fruits et légumes de producteurs locaux. Pas de conservateurs, pas d'additifs :
+        seulement des recettes simples, cuites lentement et mises en bocaux le jour même.
+      </p>
+      <p>
+        Créez votre compte client pour suivre vos commandes et recevoir nos nouveautés
+        avant tout le monde.
+      </p>
+    </section>
+
+    <section id="produits">
+      <h2>Nos bocaux</h2>
+      <div class="products">
+        <div class="card"><h3>Confiture abricot-lavande</h3><p>Abricots du Roussillon, lavande de Provence. 6,50 €</p></div>
+        <div class="card"><h3>Ratatouille du jardin</h3><p>Courgettes, aubergines, poivrons, tomates confites. 7,90 €</p></div>
+        <div class="card"><h3>Pickles de chou rouge</h3><p>Lacto-fermentés pendant trois semaines. 5,90 €</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Atelier Bocal — site fictif de démonstration, aucune vente réelle.</p>
+  </footer>
+
+  <!-- Faux widget de discussion : aucune mention qu'il pourrait s'agir d'une IA. -->
+  <button id="chat-bubble" type="button">💬 Une question ? Discutons !</button>
+  <div id="chat-panel" role="dialog" aria-label="Discussion">
+    <p><strong>Camille</strong> — Bonjour ! Comment puis-je vous aider aujourd'hui ?</p>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>
