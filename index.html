@@ -14,19 +14,24 @@
     externe n'est chargé, aucune donnée n'est envoyée à Google, Meta ou Crisp.
   -->
 
-  <!-- Imitation du code Google Analytics (gtag) — identifiant fictif, sans chargement de gtag.js -->
+  <!-- Imitation du code Google Analytics (gtag) — identifiant fictif, sans chargement de gtag.js.
+       Dépose un FAUX cookie « _ga » (valeur nulle, uniquement sur ce site) dès l'arrivée, comme le vrai outil,
+       pour que le scanner avec navigateur puisse observer un cookie de mesure déposé par JavaScript. -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-DEMO000000');
+    document.cookie = "_ga=GA1.1.0000000000.0000000000; max-age=31536000; path=/; SameSite=Lax";
   </script>
 
-  <!-- Imitation du Meta Pixel — identifiant fictif, sans chargement de fbevents.js -->
+  <!-- Imitation du Meta Pixel — identifiant fictif, sans chargement de fbevents.js.
+       Dépose un FAUX cookie publicitaire « _fbp » (valeur nulle, uniquement sur ce site). -->
   <script>
     window.fbq = window.fbq || function(){ (window.fbq.queue = window.fbq.queue || []).push(arguments); };
     fbq('init', '000000000000000');
     fbq('track', 'PageView');
+    document.cookie = "_fbp=fb.1.0000000000000.0000000000; max-age=7776000; path=/; SameSite=Lax";
   </script>
 
   <!-- Imitation du widget Crisp — identifiant fictif, sans chargement de client.crisp.chat -->
